@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, Image } from 'react-native';
 import { View } from 'native-base'
-import { Button, Colors } from "../../common";
+import { Button } from "../../common";
 
 import styles from './homeStyle.js';
 
