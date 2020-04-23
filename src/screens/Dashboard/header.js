@@ -1,27 +1,29 @@
 import React from "react";
 import { Text } from "react-native";
 import { Header, Left, Body, Right, Button} from "native-base";
-import Icon from "react-native-vector-icons/FontAwesome";
+import Ionicons from "react-native-vector-icons/Ionicons";
+import EvilIcons from "react-native-vector-icons/EvilIcons";
+
 import styles from "./DashboardStyle.js";
 
-export const HeaderComponent =  ({logo})=>{
+export const HeaderComponent =  ()=>{
 	return (
-		<Header style={{backgroundColor:"#42c762"}} >
+		<Header style={{backgroundColor:"#42c762", height: 70}} >
 			<Left>
 				<Button transparent>
-					<Icon name="bars" style={styles.icon} />
+					<Ionicons name="md-menu" style={styles.icon} />
 				</Button>
 			</Left>
-			<Body>
-                <Text>Fryo</Text>
+			<Body style={{alignItems: 'space-around'}}>
+                <Text style={styles.headerText}>Fryo</Text>
 			</Body>
 
 			<Right>
-				<Button transparent>
-					<Icon name="gift" style={styles.icon} />
+				<Button transparent >
+					<Ionicons name="ios-search" style={styles.icon} />
 				</Button>
                 <Button transparent>
-					<Icon name="gift" style={styles.icon} />
+                <EvilIcons name="bell" style={styles.icon} />
 				</Button>
 			</Right>
 		</Header>
