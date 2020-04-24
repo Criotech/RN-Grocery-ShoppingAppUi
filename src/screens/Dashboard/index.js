@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, ScrollView, Image } from "react-native";
+import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import { CircleCard, BoxCard } from '../../common'
@@ -96,7 +96,7 @@ const DrinksParol = [
     }
 ]
 
-export const Dashboard = () => {
+export const Dashboard = ({ navigation }) => {
     return (
         <View style={{flex: 1}}>
             <Header />
@@ -145,12 +145,18 @@ export const Dashboard = () => {
                                                 <Text style={{ color: "#fff", fontSize: 12 }}>{item.tag}</Text>
                                             </View>
 
-                                            <View style={styles.imageContainer}>
+                                            <TouchableOpacity onPress={() => navigation.navigate('Product', {
+                                                image: item.image,
+                                                name: item.name,
+                                                tag: item.tag,
+                                                price: item.price,
+                                                index: index
+                                            })} style={styles.imageContainer}>
                                                 <Image
                                                     style={styles.logo}
                                                     source={item.image}
                                                 />
-                                            </View>
+                                            </TouchableOpacity>
                                             <View style={{ marginTop: 5, flexDirection: 'row', justifyContent: "flex-end" }}>
                                                 <AntDesign name={item.like ? 'heart' : 'hearto'} size={25} color={item.like ? 'red' : '#878787'} />
                                             </View>
@@ -187,12 +193,18 @@ export const Dashboard = () => {
                                                 <Text style={{ color: "#fff", fontSize: 12 }}>{item.tag}</Text>
                                             </View>
 
-                                            <View style={styles.imageContainer}>
+                                            <TouchableOpacity onPress={() => navigation.navigate('Product', {
+                                                image: item.image,
+                                                name: item.name,
+                                                tag: item.tag,
+                                                price: item.price,
+                                                index: index
+                                            })} style={styles.imageContainer}>
                                                 <Image
                                                     style={styles.logo}
                                                     source={item.image}
                                                 />
-                                            </View>
+                                            </TouchableOpacity>
                                             <View style={{ marginTop: 5, flexDirection: 'row', justifyContent: "flex-end" }}>
                                                 <AntDesign name={item.like ? 'heart' : 'hearto'} size={25} color={item.like ? 'red' : '#878787'} />
                                             </View>

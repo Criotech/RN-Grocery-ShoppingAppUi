@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import { Header, Left, Body, Right } from "native-base";
 import { Button } from '../../common'
 import styles from "./productStyle.js";
@@ -7,29 +7,33 @@ import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Entypo from "react-native-vector-icons/Entypo"
 
-export const Product = () => {
+export const Product = ({ navigation, route }) => {
+    console.log(route.params)
+    const { image, tag, name, price } = route.params;
     return (
         <View style={{ flex: 1 }}>
             <Header style={{ backgroundColor: "#ffffff", height: 50 }} >
                 <Left>
-                    <FontAwesome5 name="arrow-left" color="#878787" size={15} />
+                    <TouchableOpacity onPress={() => navigation.navigate('Dashboard')}>
+                        <FontAwesome5 name="arrow-left" color="#878787" size={15} />
+                    </TouchableOpacity>
                 </Left>
                 <Body style={{ alignItems: 'space-around' }}>
-                    <Text style={styles.headerText}>Hamburger</Text>
+    <Text style={styles.headerText}>{name}</Text>
                 </Body>
 
                 <Right>
 
                 </Right>
             </Header>
-           
-           
+
+
 
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
 
                 <View style={styles.centerBox}>
-                    <Text style={styles.name}>Hamburger</Text>
-                    <Text style={styles.price}>$25.00</Text>
+                    <Text style={styles.name}>{name}</Text>
+                    <Text style={styles.price}>{price}</Text>
 
                     <View style={{ flexDirection: 'row', marginTop: 12 }}>
                         <FontAwesome name="star" color="orange" size={22} style={{ marginRight: 5 }} />
@@ -70,17 +74,17 @@ export const Product = () => {
                 </View>
 
                 <View style={styles.imageBox}>
-                <View style={styles.count} >
-                    <Text style={{ color: "#fff", fontSize: 12 }}>-$70.00</Text>
-                </View>
+                    <View style={styles.count} >
+                        <Text style={{ color: "#fff", fontSize: 12 }}>{tag}</Text>
+                    </View>
 
-                <View style={styles.imageContainer}>
-                    <Image
-                        style={styles.logo}
-                        source={require('../../../images/3.png')}
-                    />
+                    <View style={styles.imageContainer}>
+                        <Image
+                            style={styles.logo}
+                            source={image}
+                        />
+                    </View>
                 </View>
-            </View>
             </View>
         </View>
     );

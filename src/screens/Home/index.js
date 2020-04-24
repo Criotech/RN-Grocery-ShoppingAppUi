@@ -5,7 +5,7 @@ import { Button } from "../../common";
 
 import styles from './homeStyle.js';
 
-const Home = () => {
+const Home = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View>
@@ -19,12 +19,12 @@ const Home = () => {
                 <View style={styles.subView}>
                     <Text style={styles.appName}>Fryo!</Text>
                     <View style={{marginTop: 15}}>
-                        <Button bgColor="#42c762" bdColor="#fff" textColor="#fff">
+                        <Button onPress={() => navigation.navigate('SignIn')} bgColor="#42c762" bdColor="#fff" textColor="#fff">
                             Sign In
                         </Button>
                     </View>
                     <View style={{marginTop: 15}}>
-                        <Button bdColor="#42c762" textColor="#42c762">
+                        <Button bdColor="#42c762" onPress={() => navigation.navigate('SignUp')} textColor="#42c762">
                             Sign Up
                         </Button>
                     </View>
