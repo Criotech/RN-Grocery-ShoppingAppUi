@@ -60,7 +60,7 @@ const HotDeal = [
         image: require('../../../images/5.png'),
         like: false,
         tag: "-8.0%",
-        name: 'pasta',
+        name: 'Pasta',
         price: '$50'
     }
 ]

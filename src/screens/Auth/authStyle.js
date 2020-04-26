@@ -6,7 +6,7 @@ const styles = {
         justifyContent: 'space-between'
     },
     topText: {
-        fontSize: 12
+        fontSize: 14
     },
     welcomeText: {
         fontWeight: 'bold',

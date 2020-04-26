@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     centerBox: {
-        height: 500,
         width: windowWidth / 1.3,
         borderRadius: 5,
         shadowColor: "#000",
@@ -21,7 +20,10 @@ const styles = StyleSheet.create({
         elevation: 13,
         backgroundColor: '#ffffff',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingBottom: 40,
+        paddingTop: 60,
+        marginTop: 80
     },
     name: {
         fontSize: 16
@@ -43,7 +45,7 @@ const styles = StyleSheet.create({
     },
     imageBox: {
         position: 'absolute',
-        top: 70,
+        top: 60,
         zIndex: 5,
         padding: 10,
         height: 150,
