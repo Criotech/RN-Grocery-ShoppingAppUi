@@ -1,4 +1,6 @@
-A React-Native UI template of a Grocery Shopping App initially designed in flutter by ahkohd (github.com/ahkohd).
+A React-Native UI template of a Grocery Shopping App.
+
+initially designed in flutter by ahkohd (github.com/ahkohd) i decided to code it in react-native😉
 
 Design screens are on [Uplabs.](https://www.uplabs.com/posts/grocery-shopping-full-app) It's premium, purchase it if you want to use it commercially.
 
@@ -8,7 +10,7 @@ Design screens are on [Uplabs.](https://www.uplabs.com/posts/grocery-shopping-fu
 
 Don't forget to star⭐ the repo if you like what you see😉.
 # 🎥 Demo
-![demo](./fryo.gif)
+![demo]<img src="./fryo.gif" height="600" width="300">
 
 # 📸 Screenshots
 The screenshots below are taken on a android emulator.
